@@ -99,10 +99,12 @@ public class MainActivity extends AppCompatActivity {
         List<ScanResult> wifiList = wifiManager.getScanResults();
         rssi.setText("RSSI\n");
         wifiNames.setText("WIFI\n");
+        // For VM
         /*for (ScanResult scanResult : wifiList){
             rssi.setText(rssi.getText() + Integer.toString(scanResult.level) + "\n");
             wifiNames.setText(wifiNames.getText() + scanResult.SSID + "(" + scanResult.BSSID + ")" + "\n");
         }*/
+        // For Mobile
         for (ScanResult scanResult : wifiList) {
             if ((scanResult.BSSID.equals("ac:a3:1e:c5:4d:a0") || scanResult.BSSID.equals("a8:bd:27:ca:3d:70")) && pre_checked == false) {
                 pre_checked = true;
